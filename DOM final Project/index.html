@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>DOM Final Project</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Heare Section -->
+        <div class="header" id="header">
+            <ul class="header-ul">
+                <li class="nav-link pointer home" id="home">&#10224;</li>
+                <li class="nav-link pointer" id="c-info">C-Info</li>
+                <li class="nav-link pointer" id="p-info">P-Info</li>
+                <li class="nav-link pointer" id="notification">&#9997;</li>
+                <li class="nav-link pointer" id="contact">Contact</li>
+            </ul>
+        </div>
+
+        <!-- Banner Section -->
+        <div class="banner-container bgc-link" id="banner-container">
+            <div class="banner">
+                <div class="NextPrev">
+                    <div class="prev" id="prev">&#10094;</div>
+                    <div class="next" id="next">&#10095;</div>
+                </div>
+                <div class="carousel" id="carousel">
+                    <div class="slide">
+                        <img class="slide-image" src="/images/1img.jpg" alt="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-image" src="/images/2img.jpg" alt="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-image" src="/images/3img.jpg" alt="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-image" src="/images/4img.jpg" alt="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-image" src="/images/1img.jpg" alt="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-image" src="/images/2img.jpg" alt="slide-image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Customers Section with Table report -->
+        <div class="table-container bgc-link" id="table-container">
+            <div class="table-header">
+                <h3>Customers Information</h3>
+                <input class="search" id="search" type="search" placeholder="Search by Name">
+
+            </div>
+            <div class="pagination-btn">
+                <button class="page-btn" id="page-prev-btn">&#60;</button>
+                <div class="number-btn" id="number-btn">
+                </div>
+
+                <button class="page-btn" id="page-next-btn">&#62;</button>
+                <p id="page-number"></p>
+            </div>
+
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th id="table-name">Name</th>
+                        <th>City</th>
+                        <th>E-mail</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody">
+
+                </tbody>
+
+            </table>
+        </div>
+
+        <!-- Products Section -->
+        <div class="products-parent bgc-link" id="products-parent">
+            <h3 class="products-title">Product Information</h3>
+            <div class="products-banner" id="products-banner">
+            </div>
+        </div>
+
+        <div class="scroll-top" id="scroll-top">
+            &#8686;
+        </div>
+
+        <!-- Modal , Notification Section -->
+        <div class="modal-parent" id="modal-parent">
+            <div class="notification">
+                <button class="close-btn" id="close-btn">&#9747;</button>
+                <h1>Notification</h1>
+                <p>This project has been built using Vanilla JavaScript</p>
+                <p>This project built by Mr.Prem G.C.</p>
+                <P>Please send me email at premgcemail@gmail.com for more information</P>
+                <p>Thank you for visiting this site</p>
+            </div>
+        </div>
+
+
+        <!-- Form- Contact Us -->
+         <div class="form-container" id="form-container">       
+        <div class="form-parent" id="form-parent">
+            <button class="closeForm-btn" id="closeForm-btn">&#9747;</button>
+            <form method="POST" id="form" class="form">
+
+                <input type="hidden" name="access_key" value="e35e2857-e3fd-48cb-a0c1-9a26a4bcd039">
+                <input class="form-inp" type="text" name="name" required placeholder="Enter Your Name">
+                <input class="form-inp" type="email" name="email" required placeholder="Enter Your Email">
+                <textarea class="form-inp form-text" name="message" required
+                    placeholder="Write your message here"></textarea>
+                <button type="submit" class="form-submit">Submit</button>
+                <div id="result"></div>
+
+            </form>
+        </div>
+    </div>
+
+        <!-- Footer Section -->
+        <div class="footer-parent">
+            <div class="footer-body">
+                <div class="footer-body-left">
+                    <h3>Contact Us</h3>
+                    <p>Mobile: 9849285475</p>
+                    <P class="footer-email">premgcemail@gmail.com</P>
+                    
+
+                </div>
+                <div class="footer-body-rigth">
+                    <div class="footer-quicklink">
+                        <h3>Quick Links</h3>
+                        <ul class="quicklink-ul">
+                            <li class="nav-link pointer" onclick="navLink('banner-container')">Home</li>
+                            <li class="nav-link pointer" onclick="navLink('table-container')">Customer information</li>
+                            <li class="nav-link pointer" onclick="navLink('products-parent')">Products Information</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="google-map">
+                        <iframe class="google-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4994.143931116744!2d85.28545634276388!3d27.736020670054977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18b9877ece79%3A0xf889e25145f867ee!2sRaniban%20Shiva%20Mandir!5e0!3m2!1sen!2snp!4v1723618844294!5m2!1sen!2snp"
+                             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <p class="footer-title">&copy; Copy Right</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

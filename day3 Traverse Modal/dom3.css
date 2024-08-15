@@ -1,0 +1,42 @@
+
+.dom3-container
+{
+    background-color: lightgreen;
+    width: 100%;
+
+}
+
+.overlay
+{
+    width: 100%;
+    height: 100VH;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    opacity:.9;
+    display: none;
+      
+}
+#login-btn
+{
+    padding: .3rem .5rem;
+    background-color: skyblue;
+    border-radius: .3rem;
+    text-align: center;
+}
+
+.login-page{
+
+    background-color: lightgreen;
+    width: 15rem;
+    height: 10rem;
+
+}
+#close-btn
+{
+    color: red;
+    font-size: 1rem;
+}
